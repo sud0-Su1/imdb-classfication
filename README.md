@@ -40,6 +40,31 @@ imdb-sentiment/
 ```bash
 git clone https://github.com/yourusername/imdb-sentiment.git
 cd imdb-sentiment
+```
+**2. Install dependencies**
+
+pip install -r requirements.txt
+
+```
+**3. Train the model**
+
+python src/train.py
+
+```
+**4. Start the FastAPI server**
+
+uvicorn app.main:app --reload
+
+```
+5. Test a review
+
+curl -X POST "http://127.0.0.1:8000/predict" \
+     -H "Content-Type: application/json" \
+     -d '{"review": "This movie was amazing!"}'
+
+
+
+---
 
 📊 Results
 
